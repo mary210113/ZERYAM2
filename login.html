@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>Welcome</h2>
+           
+            <form action="http://localhost/ruby/login.php" method="post">
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="password" required>
+                </label>
+                <p class="forgot-pass" style="color:black">Forgot password?</p>
+                <button type="submit" name="login" id="login-button" class="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                    <h3> Please Create your Account with us by Signing up!<h3>
+                </div>
+                <div class="img__text m--in">
+                    <h3> Yoopiiiii!! Welcome to our home <h3>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">Sign Up</span>
+                    <span class="m--in">Sign In</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2>Create your Account</h2>
+                
+                
+                <form action="http://localhost/ruby/signup.php" method="post">
+                    <label>
+                        <span>Name</span>
+                        <input type="text" name="name" required>
+                    </label>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" required>
+                    </label>
+                    <label>
+                        <span>Password</span>
+                        <input type="password" name="password" required>
+                    </label>
+                    <button type="submit" id="signup" name="register" class="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.img__btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s--signup');
+        });
+    </script>
+</body>
+
+</html>
